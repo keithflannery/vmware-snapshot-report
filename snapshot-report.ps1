@@ -1,5 +1,4 @@
 
-
 function Measure-TimeSince {
     param (
         [DateTime]$StartDate
@@ -116,7 +115,7 @@ function Get-SnapshotInfo {
     # URL Decode Name
     $name = (URLDecode -string $Tree.Name)
     # Age of snapshot in days
-    $age = Calculate-TimeSince $Tree.CreateTime.addhours(10)
+    $age = Measure-TimeSince $Tree.CreateTime.addhours(10)
     # Get Snapshot Creator
     # $createdby = Get-SnapshotCreator -snapshot $Tree
 
