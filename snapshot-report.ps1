@@ -179,11 +179,6 @@ function Get-SnapshotCreator {
 }
 
 
-
-$ignorevms = "@!"
-$ignorenames = "@!"
-$ignoredescription = "@!"
-
 Set-PowerCLIConfiguration -DefaultVIServerMode Multiple -Scope Session -Confirm:$false
 Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Scope Session -Confirm:$false
 Set-PowerCLIConfiguration -Scope Session -ParticipateInCEIP $true -Confirm:$false
